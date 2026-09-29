@@ -65,7 +65,7 @@ The project uses a dimensional modelling / star schema approach.
 
 - Dimension Tables
 
-1. DimDate
+**1. DimDate**
 
 Stores date-related information.
 
@@ -74,7 +74,7 @@ ExpenseDate
 Month
 Year
 
-2. DimEmployee
+**2. DimEmployee**
 
 Stores employee information and historical versions.
 
@@ -87,14 +87,14 @@ IsActive
 
 The DimEmployee table uses SCD Type 2 to preserve historical changes such as an employee changing cities.
 
-3. DimDepartment
+**3. DimDepartment**
 
 Stores department information.
 
 DeptID
 Departmentname
 
-4. Fact Table
+**4. Fact Table**
 
 FactExpense
 
@@ -115,7 +115,7 @@ The database tables are created with primary keys, foreign keys, and auto-increm
 
 ## ETL Process
 
-1. Extract
+**1. Extract**
 
 The pipeline reads CSV files from:
 
@@ -129,7 +129,7 @@ Data/Archive/
 
 This prevents already-processed files from remaining in the raw input directory.
 
-2. Transform
+**2. Transform**
 
 The pipeline performs several transformations:
 
@@ -141,18 +141,18 @@ Dimension creation
 Surrogate-key mapping
 Fact-table preparation
 
-3. Validate
+**3. Validate**
 
 The pipeline validates incoming data before loading it into MySQL.
 
 Validation includes:
 
-Empty dataset check
-NULL ExpenseID
-Duplicate ExpenseID
-NULL Amount
-Negative Amount
-Invalid ExpenseDate
+- Empty dataset check
+- NULL ExpenseID
+- Duplicate ExpenseID
+- NULL Amount
+- Negative Amount
+- Invalid ExpenseDate
 
 Separate validation functions are used for full and incremental loads.
 
@@ -220,7 +220,7 @@ This preserves historical employee information.
 
 The pipeline also checks whether an incoming ExpenseID already exists in FactExpense.
 
-1. New Expense
+**1. New Expense**
 
 If the ExpenseID does not exist:
 ```
@@ -229,7 +229,7 @@ New Expense
 Insert into FactExpense
 ```
 
-2. Existing Expense
+**2. Existing Expense**
 
 If the ExpenseID already exists, the pipeline compares:
 
@@ -348,10 +348,10 @@ This project demonstrates practical implementation of:
 
 ## How to Run
 
-1. Install Dependencies
+**1. Install Dependencies**
 pip install pandas sqlalchemy pymysql python-dotenv
 
-2. Configure Database
+**2. Configure Database**
 
 Database credentials are stored separately from the ETL code.
 
@@ -362,20 +362,20 @@ DB_PASSWORD=your_password
 DB_HOST=localhost
 DB_NAME=Expense
 
-3. Add Raw CSV Files
+**3. Add Raw CSV Files**
 
 Place your input CSV files inside:
 
 Data/Raw/
 
-4. Run the Pipeline
+**4. Run the Pipeline**
 python etl.py
 
 The pipeline automatically determines whether the process should be a Full Load or Incremental Load.
 
 ## Example Workflow
 
-1. First Run
+**1. First Run**
 ```
 CSV Batch 1
      │
@@ -395,7 +395,7 @@ Create Fact
 MySQL Data Warehouse
 ```
 
-2. Later Run
+**2. Later Run**
 ```
 CSV Batch 2
      │
