@@ -190,17 +190,19 @@ After the warehouse has been created, subsequent files are processed using Incre
 ## SCD Type 2
 
 Initially:
-
+```
 Employee   City      EffectiveDate   EndDate   IsActive
 --------------------------------------------------------
 Rahul      Mumbai    2026-01-01      NULL      True
+```
 
 If Rahul changes city to Pune:
-
+```
 Employee   City      EffectiveDate   EndDate      IsActive
 ----------------------------------------------------------
 Rahul      Mumbai    2026-01-01      2026-06-14   False
 Rahul      Pune      2026-06-15      NULL         True
+```
 
 Instead of overwriting the old record, the pipeline:
 
