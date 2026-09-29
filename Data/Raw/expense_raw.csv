@@ -1,0 +1,21 @@
+ExpenseID,ExpenseDate,Employee,Department,ExpenseType,Vendor,City,PaymentMode,Amount
+7001,2026-06-01,Akshay,Production,Travel,Uber,Mumbai,Card,850
+7002,2026-06-01,Rahul,IT,Software,Microsoft,Pune,Card,2500
+7003,2026-06-02,Priya,HR,Training,Coursera,Mumbai,UPI,1800
+7004,2026-06-02,Neha,Quality,Travel,Uber,Nashik,Cash,650
+7005,2026-06-03,Akshay,Production,Food,Swiggy,Mumbai,UPI,900
+7006,2026-06-03,Rahul,IT,Hardware,Dell,Pune,Card,45000
+7007,2026-06-04,Priya,HR,Travel,Ola,Mumbai,UPI,750
+7008,2026-06-04,Neha,Quality,Software,Microsoft,Nashik,Card,3000
+7009,2026-06-05,Akshay,Production,Maintenance,ABC Services,Mumbai,Bank,12000
+7010,2026-06-05,Rahul,IT,Travel,Uber,Pune,UPI,1100
+7011,2026-06-06,Priya,HR,Food,Swiggy,Mumbai,UPI,650
+7012,2026-06-06,Neha,Quality,Training,Coursera,Nashik,Card,2200
+7013,2026-06-07,Akshay,Production,Travel,Ola,Mumbai,Cash,950
+7014,2026-06-07,Rahul,IT,Software,Adobe,Pune,Card,4200
+7015,2026-06-08,Priya,HR,Travel,Uber,Mumbai,UPI,800
+7016,2026-06-08,Neha,Quality,Maintenance,XYZ Services,Nashik,Bank,8500
+7017,2026-06-09,Akshay,Production,Food,Swiggy,Mumbai,UPI,750
+7018,2026-06-09,Rahul,IT,Hardware,HP,Pune,Card,28000
+7019,2026-06-10,Priya,HR,Training,Udemy,Mumbai,Card,1500
+7020,2026-06-10,Neha,Quality,Travel,Ola,Nashik,Cash,700

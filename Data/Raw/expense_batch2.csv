@@ -1,0 +1,6 @@
+ExpenseID,ExpenseDate,Employee,Department,ExpenseType,Vendor,City,PaymentMode,Amount
+7021,11-06-2026,Akshay,Production,Travel,Uber,Mumbai,Card,1200
+7022,11-06-2026,Rohan,Finance,Training,Udemy,Mumbai,Card,2500
+7023,12-06-2026,Priya,HR,Food,Swiggy,Mumbai,UPI,800
+7005,03-06-2026,Akshay,Production,Food,Swiggy,Mumbai,UPI,1100
+7008,04-06-2026,Neha,Quality,Software,Microsoft,Nashik,Card,3000
